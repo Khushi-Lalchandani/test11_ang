@@ -1,0 +1,18 @@
+<ul *ngFor="let employee of employee_data" class="card">
+  <li class="card_list">
+    <div class="card_detail">
+      <div class="card_flex">
+        <img [src]="employee.imageUrl" class="card_img" [alt]="employee.name" />
+        <div class="card_flex-text">
+          <h4>{{ employee.name }}</h4>
+          <p class="card_flex-text--designation">{{ employee.designation }}</p>
+        </div>
+      </div>
+      <p>Email: {{ employee.email }}</p>
+      <p *ngIf="employee.managerId">Manager id: {{ employee.managerId }}</p>
+      <p *ngIf="employee.subordinates && employee.subordinates.length > 0">
+        Subordinates: {{ employee.subordinates.length }}
+      </p>
+    </div>
+  </li>
+</ul>
