@@ -68,4 +68,8 @@ export class EmployeeService {
     },
     // ... Add more employees as needed
   ];
+
+  getEmployeesByIds(ids: number[]): any[] {
+    return this.employee_data.filter((employee) => ids.includes(employee.id));
+  }
 }

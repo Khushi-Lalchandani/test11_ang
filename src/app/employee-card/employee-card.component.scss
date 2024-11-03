@@ -1,31 +1,18 @@
 .card {
   display: flex;
   justify-content: center;
+
   &_list {
     width: 70%;
     display: flex;
-    justify-content: center;
-    // margin-top: 2rem;
-    // padding-top: 2rem;
-    // border-bottom: 0.2rem solid #000;
-    // position: relative;
 
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   height: 20%;
-    //   width: 0.2rem;
-    //   bottom: -13%;
-    //   background-color: #000;
-    // }
+    justify-content: center;
   }
   &_detail {
     padding: 2rem;
     border: 1px solid #999;
     display: inline-block;
     position: relative;
-    width: 40%;
-    height: auto;
   }
 
   &_flex {

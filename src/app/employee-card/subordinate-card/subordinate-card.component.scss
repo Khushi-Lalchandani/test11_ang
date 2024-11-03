@@ -1,0 +1,37 @@
+.outside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  &_card {
+    display: inline-block;
+    padding: 2rem;
+    border: 1px solid #000;
+  }
+  &_flex {
+    display: flex;
+
+    gap: 2rem;
+    align-items: center;
+    &-img {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+    }
+    &-text {
+      &--designation {
+        margin-top: -0.7rem;
+        color: #666;
+      }
+    }
+  }
+
+  &_email {
+  }
+  &_managerID {
+  }
+  &_subordinates {
+  }
+}

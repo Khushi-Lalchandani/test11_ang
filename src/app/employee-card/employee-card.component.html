@@ -1,5 +1,5 @@
-<ul *ngFor="let employee of employee_data" class="card">
-  <li class="card_list">
+<div class="outside" *ngFor="let employee of rootEmployee">
+  <div class="card">
     <div class="card_detail">
       <div class="card_flex">
         <img [src]="employee.imageUrl" class="card_img" [alt]="employee.name" />
@@ -14,5 +14,13 @@
         Subordinates: {{ employee.subordinates.length }}
       </p>
     </div>
-  </li>
-</ul>
+  </div>
+  <div
+    class="card_sub"
+    *ngIf="employee.subordinates && employee.subordinates.length > 0"
+  >
+    <app-subordinate-card
+      [employee]="employee.subordinates"
+    ></app-subordinate-card>
+  </div>
+</div>

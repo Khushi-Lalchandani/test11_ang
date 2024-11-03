@@ -1,0 +1,21 @@
+<div class="outside">
+  <div class="content" *ngFor="let sub of subordinates">
+    <div class="content_card">
+      <div class="content_flex">
+        <img [src]="sub.imageUrl" [alt]="sub.name" class="content_flex-img" />
+        <div class="content_flex-text">
+          <h4>{{ sub.name }}</h4>
+          <p class="content_flex-text--designation">{{ sub.designation }}</p>
+        </div>
+      </div>
+      <p class="content_email">Email: {{ sub.email }}</p>
+      <p class="content_managerID">Manager Id: {{ sub.managerId }}</p>
+      <p
+        class="content_subordinates"
+        *ngIf="sub.subordinates && sub.subordinates.length > 0"
+      >
+        Subordinates: {{ sub.subordinates.length }}
+      </p>
+    </div>
+  </div>
+</div>
